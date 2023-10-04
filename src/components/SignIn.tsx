@@ -1,4 +1,6 @@
+import Link from "next/link"
 import { Icons } from "./Icons"
+import UserAuthForm from "./UserAuthForm"
 
 const SignIn = () => {
   return <div className="container  mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
@@ -8,6 +10,12 @@ const SignIn = () => {
         <p className="text-sm max-w-xs mx-auto">By continuing, you are setting up a DevBlog account and agree to our terms and condition.</p>
 
         {/**Sign In form */}
+        <UserAuthForm  />
+
+        <p className="px-8 text-center text-sm text-zinc-700">
+            New to DevBread?{' '}
+            <Link href="/sign-up" className="hiover:text-zinc-800 text-sm underline underline-offset-4">Sign Up</Link>
+        </p>
     </div>
   </div>
 }
