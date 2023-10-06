@@ -14,7 +14,7 @@ const SignIn = () => {
 
         <p className="px-8 text-center text-sm text-zinc-700">
             New to DevBread?{' '}
-            <Link href="/sign-up" className="hiover:text-zinc-800 text-sm underline underline-offset-4">Sign Up</Link>
+            <Link href="/sign-up" className="hover:text-zinc-800 text-sm underline underline-offset-4">Sign Up</Link>
         </p>
     </div>
   </div>

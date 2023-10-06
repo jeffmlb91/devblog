@@ -1,24 +1,34 @@
-"use client"
+'use client'
 
-import { FC, useState } from 'react'
-import { Button } from './ui/Button'
 import { cn } from '@/lib/utils'
 import { signIn } from 'next-auth/react'
+import * as React from 'react'
+import { FC, useState } from 'react'
+import { Button } from '@/components/ui/Button'
+import { useToast } from '@/hooks/use-toast'
 import { Icons } from './Icons'
+
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 const UserAuthForm: FC<UserAuthFormProps> = ({className, ...props }) => {
 
-  const [ isLoading, setIsLoading ] = useState<Boolean>(false)  
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const { toast } = useToast()  
 
   const loginWithGoogle = async () => {
     setIsLoading(true)
 
     try {
+        throw new Error()
         await signIn('google')
     } catch (error) {
         // toast notification
+        toast({
+          title: 'There was a problem.',
+          description: 'There was an error logging in with Google',
+          variant: 'destructive'
+        })
     } finally {
         setIsLoading(false)
     }
