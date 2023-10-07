@@ -3,6 +3,7 @@ import { db } from "./db";
 import {PrismaAdapter} from '@next-auth/prisma-adapter'
 import GoogleProvider from "next-auth/providers/google"
 
+{/**Creating Prisma adapter for authentification */}
 export const authOptions: NextAuthOptions = {
     adapter: PrismaAdapter(db),
     session: {
