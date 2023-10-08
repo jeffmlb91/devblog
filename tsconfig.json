@@ -14,6 +14,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    // other compiler options...
+    "types": ["next-auth"],
     "plugins": [
       {
         "name": "next"
