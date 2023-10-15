@@ -4,6 +4,8 @@ import { Inter } from "next/font/google"
 import Navbar from "../components/Navbar"
 import { Toaster } from '@/components/ui/Toaster'
 
+{/**defibning meta data */}
+
 export const metadata = {
   title: 'devblog',
   description: 'A Reddit clone built with Next.js and TypeScript.',
